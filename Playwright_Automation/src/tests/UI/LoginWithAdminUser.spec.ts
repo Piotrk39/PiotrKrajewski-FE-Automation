@@ -1,0 +1,19 @@
+import { test } from '@playwright/test';
+import { CommonSteps } from '../../pages/CommonSteps';
+import { DashboardPage } from '../../pages/Dashboard/DashboardPage';
+import users from '../../../../js/users';
+
+test('Login with Admin user', async ({ page, baseURL }) => {
+    const common = new CommonSteps(page);
+    const dashboard = new DashboardPage(page);
+    await test.step('Navigate to Login page', async () => {
+      console.log('Navigating to Login page menu...');
+      await common.navigate(baseURL);
+    });
+
+    await test.step('Login admin user', async () => {
+      console.log('Typing email and password...');
+      await dashboard.login(users[0].email, users[0].password);
+      await dashboard.clickLogin();
+    });
+});
