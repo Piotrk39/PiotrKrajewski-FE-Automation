@@ -12,9 +12,17 @@ export class DashboardPage extends NavigationBase {
         await this.click(DashboardPageObject.LOGIN_BUTTON);
     }
 
+    async validateMainPageParagraph(paragraph: number, text: string) {
+        await this.isElementPresentByText(DashboardPageObject.generateParagraph(paragraph), text);
+    }
+
     async logout() {
         await this.click(DashboardPageObject.USER_ICON);
         await this.click(DashboardPageObject.LOGOUT_BUTTON);
+    }
+
+    async validateLoginPageTitle(title: string) {
+        await this.isElementPresentByText(DashboardPageObject.LOGIN_PAGE_TITLE, title);
     }
 
 

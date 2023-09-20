@@ -99,13 +99,13 @@ export class NavigationBase {
 
   async isElementPresentByText(locator: string, text: string) {
     const textContent = await this.getElementText(locator);
+    const formattedTextContent = textContent.replace(/\n/g, '').replace(/\s+/g, ' ').trim();
 
-    if(textContent === text) {
+    if(formattedTextContent === text) {
         console.log(`Elemnt with text ${text} was presnt`)
-        return;
       }
       else {
-        throw new Error(`No mathing element with text: ${text} instead element containing: ${textContent} was found`);
+        throw new Error(`No mathing element with text: ${text} instead element containing: ${formattedTextContent} was found`);
       }
 }
 
