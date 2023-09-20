@@ -18,7 +18,6 @@ test('GET login', async ({ request, baseURL }) => {
           // Handle the HTML response
           const htmlContent = await response.text();
 
-          // Use a library like 'cheerio' or process the HTML as needed
           // For example, you can search for specific elements:
           const element = '#login';
           
