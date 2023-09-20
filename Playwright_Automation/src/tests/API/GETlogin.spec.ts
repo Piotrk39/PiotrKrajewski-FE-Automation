@@ -5,7 +5,7 @@ test('GET login', async ({ request, baseURL }) => {
     await test.step('Validate element loaded', async () => {
       console.log('Checking element...');
       const response = await request.get( baseURL, {
-      });
+    });
     
       const contentType = response.headers()['content-type'];
   

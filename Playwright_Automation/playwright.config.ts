@@ -5,7 +5,7 @@ const config = {
   workers: 1,
   outputDir: './test-results',
   tesDir: 'tests/UI',
-  timeout: 300000,
+  timeout: 30000,
   use: {
       video:'on-first-retry',
       screenshot: 'only-on-failure',
