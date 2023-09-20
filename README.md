@@ -25,11 +25,11 @@ npm install
 >
 > 🚩 **Note**
 >
-> You need to have "Live Server" extension installed on your VS code
+> - You need to have "Live Server" extension installed on your VS code
 >
-> Run the live server (By default it should be at port 5500 if it is not you will have to update the baseURL)
+> - Run the live server (By default it should be at port 5500 if it is not you will have to update the baseURL)
 >
-> "baseURL" is located under Playwright_Automation/playwright.config.ts under "projects"
+> - "baseURL" is located under Playwright_Automation/playwright.config.ts under "projects"
 
 ### Run test via console
 
