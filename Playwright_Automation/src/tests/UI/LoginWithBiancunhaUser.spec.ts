@@ -4,7 +4,7 @@ import { DashboardPage } from '../../pages/Dashboard/DashboardPage';
 import testUsers from '../../../resources/testData/testUsers/testUsers';
 import content from '../../../resources/testData/Content/Content';
 
-test('Login with Admin user', async ({ page, baseURL }) => {
+test('Login with Biancunha user', async ({ page, baseURL }) => {
     const common = new CommonSteps(page);
     const dashboard = new DashboardPage(page);
     await test.step('Navigate to Login page', async () => {
@@ -14,7 +14,7 @@ test('Login with Admin user', async ({ page, baseURL }) => {
 
     await test.step('Login admin user', async () => {
       console.log('Typing email and password...');
-      await dashboard.login(testUsers[0].email, testUsers[0].password);
+      await dashboard.login(testUsers[1].email, testUsers[1].password);
       console.log('Cliking login...');
       await dashboard.clickLogin();
     });
