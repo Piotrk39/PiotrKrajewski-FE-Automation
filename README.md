@@ -32,8 +32,9 @@ npm install
 > - "baseURL" is located under Playwright_Automation/playwright.config.ts under "projects"
 
 ### Run test via console
-
-> Navigate to Playwright_Automation
+```
+> cd Playwright_Automation
+```
 
 ```shell
 npx playwright test --project Chrome
