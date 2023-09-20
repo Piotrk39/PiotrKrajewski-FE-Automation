@@ -1,7 +1,7 @@
 import { test } from '@playwright/test';
 import { CommonSteps } from '../../pages/CommonSteps';
 import { DashboardPage } from '../../pages/Dashboard/DashboardPage';
-import users from '../../../../js/users';
+import testUsers from '../../../resources/testData/testUsers/testUsers';
 
 test('Login with Admin user', async ({ page, baseURL }) => {
     const common = new CommonSteps(page);
@@ -13,7 +13,11 @@ test('Login with Admin user', async ({ page, baseURL }) => {
 
     await test.step('Login admin user', async () => {
       console.log('Typing email and password...');
-      await dashboard.login(users[0].email, users[0].password);
+      await dashboard.login(testUsers[0].email, testUsers[0].password);
+      console.log(testUsers[0].email)
+      console.log(testUsers[1].email)
+      console.log(testUsers[2].email)
+      console.log('Cliking login...');
       await dashboard.clickLogin();
     });
 });

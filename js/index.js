@@ -16,6 +16,7 @@ function logIn() {
 
     for (const user of users) {
         if (user.email == email.value && user.password == password.value) {
+            console.log('clicking')
             localStorage.setItem('logged', user.email);
         }
     }

@@ -26,7 +26,7 @@ export class NavigationBase {
 
   async type(locator: string, text: string) {
     await this.page.waitForSelector(locator);
-    await this.page.fill(locator, text);
+    await this.page.type(locator, text, {delay: 100});
     return text;
   }
 

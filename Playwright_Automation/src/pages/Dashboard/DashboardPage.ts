@@ -12,5 +12,9 @@ export class DashboardPage extends NavigationBase {
         await this.click(DashboardPageObject.LOGIN_BUTTON);
     }
 
+    async logout() {
+        
+    }
+
 
 }
