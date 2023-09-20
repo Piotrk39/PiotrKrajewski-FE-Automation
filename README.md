@@ -33,6 +33,8 @@ npm install
 
 ### Run test via console
 
+> Navigate to Playwright_Automation
+
 ```shell
 npx playwright test --project Chrome
 ```
