@@ -14,10 +14,12 @@ test('Login with Admin user', async ({ page, baseURL }) => {
     await test.step('Login admin user', async () => {
       console.log('Typing email and password...');
       await dashboard.login(testUsers[0].email, testUsers[0].password);
-      console.log(testUsers[0].email)
-      console.log(testUsers[1].email)
-      console.log(testUsers[2].email)
       console.log('Cliking login...');
       await dashboard.clickLogin();
     });
+
+    await test.step('Logout', async () => {
+      console.log('Logging out...');
+      await dashboard.logout();
+    })
 });

@@ -13,7 +13,8 @@ export class DashboardPage extends NavigationBase {
     }
 
     async logout() {
-        
+        await this.click(DashboardPageObject.USER_ICON);
+        await this.click(DashboardPageObject.LOGOUT_BUTTON);
     }
 
 
