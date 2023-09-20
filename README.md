@@ -54,6 +54,12 @@ npx playwright test
 ### Project is written in TypeScript and uses Playwright API to run the tests. Structure of the project consists of Page Object model that is divided into locators and methods that are called in the test itself.
 ### In addtition to UI tests API testing was added that can be run together or separate from UI tests.
 
+### Since the application presented is one page app all the tests will pass no matter the "expect" result validation the idea behind the structure of the tests was to present the possibilities of "Playwright" itself as well as the structure the tests could take in the business environment that usually is very demanding and needs a clear structure with separate functions, locators and tests divided into suites depending on tests written in Test management system eg. X-ray for Jira or Azure DevOps.
+
+### Tests cover the area of different users loging into the app and are presented with 3 pragraphs of text on the main page. After logout user should see again the login page with specyfic h1 text.
+
+### In the invalidPath user logs in to the app with the wrong password and instead of seeing 3 paragraphs is presented with the welcome text from login page.
+
 ## License
 
 [![license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/cypress-io/cypress/blob/master/LICENSE)
