@@ -35,14 +35,26 @@ npm install
 ```
 > cd Playwright_Automation
 ```
-
+### to install allure-reporter
 ```shell
-npx playwright test --project Chrome
+npm install
+```
+### Run test with certain project
+```shell
+npx playwright test --project=Chrome --reporter allure-playwright
 ```
 ### Or to run both mobile and desktop test
 
 ```shell
-npx playwright test
+npx playwright test --reporter allure-playwright
+```
+### Generate Report
+```shell
+npx allure generate --clean
+```
+> Display HTML allure-report
+```shell
+npx allure open
 ```
 
 ### Or run them using built in runner via VS Code
@@ -62,7 +74,9 @@ npx playwright test
 
 - Such enviroment needs clear structure with separate functions, locators and tests divided into suites depending on tests written in Test management system eg. X-ray for Jira or Azure DevOps.
 
-> 🚩 **Test Cases**
+- For clear reporting Allure Reporter was added that displays test resluts in clean and approchable manner.
+
+> 🚩 **Test Cases UI**
 
 ```shell
 Valid Path:
@@ -75,6 +89,13 @@ THEN user logs out and sees again the login page with "welcome" h1 text.
 Invalid Path:
 WHEN user logs into the app with his "username" and another users "password".
 THEN after clicking login button he is not redirected and still sees login page with "welcome" h1 text.
+```
+> 🚩 **Test Case API**
+
+```shell
+Valid Path:
+GIVEN user GETs baseURL.
+THEN within the response exists #login element.
 ```
 ## License
 
