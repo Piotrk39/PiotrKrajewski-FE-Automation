@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('GET login', async ({ request, baseURL }) => {
+test('GET login page', async ({ request, baseURL }) => {
 
     await test.step('Validate element loaded', async () => {
       console.log('Checking element...');

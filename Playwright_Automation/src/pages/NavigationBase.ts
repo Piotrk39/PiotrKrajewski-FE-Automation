@@ -7,11 +7,6 @@ export class NavigationBase {
     this.page = page;
   }
 
-  async selectDropdownList(dropdown: string, value: string) {
-    await this.page.waitForSelector(dropdown);
-    await this.page.selectOption(dropdown, {label: value});
-}
-
   async type(locator: string, text: string) {
     await this.page.waitForSelector(locator);
     await this.page.type(locator, text);
@@ -29,33 +24,6 @@ export class NavigationBase {
 
   async getElementText(locator: string) {
     return await this.page.locator(locator).textContent();
-  }
-
-  async waitForPageLoad() {
-    await this.page.waitForEvent("domcontentloaded");
-    await this.page.waitForLoadState('networkidle');
-  }
-
-  async waitForTimeout(timeout: number) {
-    await this.page.waitForTimeout(timeout);
-  }
-
-  async waitForElementDisplayed(selector: string) {
-    await this.page.waitForSelector(selector, { state: 'visible' });
-  }
-
-  async waitForElement(selector: string) {
-    await this.page.waitForSelector(selector);
-  }
-
-  async clickUntilElementDisappears(locatorToClick: string, selectorToDisappear: string) {
-    for (let i = 0; i < 10; i++) {
-      await this.click(locatorToClick);
-      await this.waitForTimeout(500);
-      if (!(await this.page.isVisible(selectorToDisappear))) {
-        break;
-      }
-    }
   }
 
   async isElementPresentByText(locator: string, text: string) {

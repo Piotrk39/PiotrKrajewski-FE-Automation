@@ -2,9 +2,8 @@ import { test } from '@playwright/test';
 import { CommonSteps } from '../../../pages/CommonSteps';
 import { DashboardPage } from '../../../pages/Dashboard/DashboardPage';
 import testUsers from '../../../../resources/testData/testUsers/testUsers';
-import content from '../../../../resources/testData/Content/Content';
 
-test('Login with Admin username and Biancunha', async ({ page, baseURL }) => {
+test('Login with Admin username and Biancunha password', async ({ page, baseURL }) => {
     const common = new CommonSteps(page);
     const dashboard = new DashboardPage(page);
     await test.step('Navigate to Login page', async () => {
