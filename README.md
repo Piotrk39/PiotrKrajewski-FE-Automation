@@ -73,7 +73,7 @@ THEN user logs out and sees again the login page with "welcome" h1 text.
 
 ```shell
 Invalid Path:
-WHEN user logs into the app with his "username" and another user's "password".
+WHEN user logs into the app with his "username" and another users "password".
 THEN after clicking login button he is not redirected and still sees login page with "welcome" h1 text.
 ```
 ## License
