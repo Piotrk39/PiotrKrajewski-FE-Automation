@@ -29,7 +29,7 @@ const config = {
   },
   retries: 0,
 
-  reporter: 'html',
+  reporter: [['html'], ['allure-playwright']],
 
   projects :[
       {
